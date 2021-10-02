@@ -1,0 +1,6 @@
+
+[B]6.0.0~beta1 (2021.10.02)[/B]
+- Major version upgrade.
+
+[B]5.0.0[/B]
+- Initial release.
