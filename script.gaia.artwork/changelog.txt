@@ -1,5 +1,5 @@
 
-[B]6.0.0~beta1 (2021.10.02)[/B]
+[B]6.0.0~beta1 (2021.10.03)[/B]
 - Major version upgrade.
 - Removed Python dependency.
 
