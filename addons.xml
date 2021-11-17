@@ -33,6 +33,7 @@
 
 		<import addon="script.module.fenomscrapers" version="1.4.1" optional="true" />
 		<import addon="script.module.oathscrapers" version="1.00.07" optional="true" />
+		<import addon="script.module.thecrew" version="1.1.5b" optional="true" />
 		<import addon="script.module.openscrapers" version="0.0.2.012" optional="true" /> <!-- Not Python 3 compatible -->
 		<import addon="script.module.lambdascrapers" version="2.0.0" optional="true" /> <!-- Not Python 3 compatible -->
 		<import addon="script.module.civitasscrapers" version="0.0.5.8" optional="true" /> <!-- Not Python 3 compatible -->
@@ -76,21 +77,21 @@
 		<forum>https://gaiakodi.com/?support</forum>
 
 		<assets>
-			<icon>resources/icon.png</icon>
-			<clearlogo>resources/clearlogo.png</clearlogo>
-			<fanart>resources/fanart.jpg</fanart>
-			<banner>resources/banner.jpg</banner>
+			<icon>meta/icon.png</icon>
+			<clearlogo>meta/clearlogo.png</clearlogo>
+			<fanart>meta/fanart.jpg</fanart>
+			<banner>meta/banner.jpg</banner>
 
-			<screenshot>resources/screenshots/screenshot01.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot02.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot03.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot04.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot05.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot06.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot07.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot08.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot09.jpg</screenshot>
-			<screenshot>resources/screenshots/screenshot10.jpg</screenshot>
+			<screenshot>meta/screenshot01.jpg</screenshot>
+			<screenshot>meta/screenshot02.jpg</screenshot>
+			<screenshot>meta/screenshot03.jpg</screenshot>
+			<screenshot>meta/screenshot04.jpg</screenshot>
+			<screenshot>meta/screenshot05.jpg</screenshot>
+			<screenshot>meta/screenshot06.jpg</screenshot>
+			<screenshot>meta/screenshot07.jpg</screenshot>
+			<screenshot>meta/screenshot08.jpg</screenshot>
+			<screenshot>meta/screenshot09.jpg</screenshot>
+			<screenshot>meta/screenshot10.jpg</screenshot>
 		</assets>
 	</extension>
 </addon>
@@ -111,10 +112,10 @@
 		<forum>https://gaiakodi.com/?support</forum>
 
 		<assets>
-			<icon>resources/icon.png</icon>
-			<clearlogo>resources/clearlogo.png</clearlogo>
-			<fanart>resources/fanart.jpg</fanart>
-			<banner>resources/banner.jpg</banner>
+			<icon>meta/icon.png</icon>
+			<clearlogo>meta/clearlogo.png</clearlogo>
+			<fanart>meta/fanart.jpg</fanart>
+			<banner>meta/banner.jpg</banner>
 		</assets>
 	</extension>
 </addon>
@@ -135,10 +136,10 @@
 		<forum>https://gaiakodi.com/?support</forum>
 
 		<assets>
-			<icon>resources/icon.png</icon>
-			<clearlogo>resources/clearlogo.png</clearlogo>
-			<fanart>resources/fanart.jpg</fanart>
-			<banner>resources/banner.jpg</banner>
+			<icon>meta/icon.png</icon>
+			<clearlogo>meta/clearlogo.png</clearlogo>
+			<fanart>meta/fanart.jpg</fanart>
+			<banner>meta/banner.jpg</banner>
 		</assets>
 	</extension>
 </addon>
@@ -159,10 +160,10 @@
 		<forum>https://gaiakodi.com/?support</forum>
 
 		<assets>
-			<icon>resources/icon.png</icon>
-			<clearlogo>resources/clearlogo.png</clearlogo>
-			<fanart>resources/fanart.jpg</fanart>
-			<banner>resources/banner.jpg</banner>
+			<icon>meta/icon.png</icon>
+			<clearlogo>meta/clearlogo.png</clearlogo>
+			<fanart>meta/fanart.jpg</fanart>
+			<banner>meta/banner.jpg</banner>
 		</assets>
 	</extension>
 </addon>
@@ -183,10 +184,10 @@
 		<forum>https://gaiakodi.com/?support</forum>
 
 		<assets>
-			<icon>resources/icon.png</icon>
-			<clearlogo>resources/clearlogo.png</clearlogo>
-			<fanart>resources/fanart.jpg</fanart>
-			<banner>resources/banner.jpg</banner>
+			<icon>meta/icon.png</icon>
+			<clearlogo>meta/clearlogo.png</clearlogo>
+			<fanart>meta/fanart.jpg</fanart>
+			<banner>meta/banner.jpg</banner>
 		</assets>
 	</extension>
 </addon>
@@ -214,10 +215,10 @@
 		<forum>https://gaiakodi.com/?support</forum>
 
 		<assets>
-			<icon>resources/icon.png</icon>
-			<clearlogo>resources/clearlogo.png</clearlogo>
-			<fanart>resources/fanart.jpg</fanart>
-			<banner>resources/banner.jpg</banner>
+			<icon>meta/icon.png</icon>
+			<clearlogo>meta/clearlogo.png</clearlogo>
+			<fanart>meta/fanart.jpg</fanart>
+			<banner>meta/banner.jpg</banner>
 		</assets>
 	</extension>
 </addon>
@@ -245,10 +246,10 @@
 		<forum>https://gaiakodi.com/?support</forum>
 
 		<assets>
-			<icon>resources/icon.png</icon>
-			<clearlogo>resources/clearlogo.png</clearlogo>
-			<fanart>resources/fanart.jpg</fanart>
-			<banner>resources/banner.jpg</banner>
+			<icon>meta/icon.png</icon>
+			<clearlogo>meta/clearlogo.png</clearlogo>
+			<fanart>meta/fanart.jpg</fanart>
+			<banner>meta/banner.jpg</banner>
 		</assets>
 	</extension>
 </addon>
@@ -269,10 +270,10 @@
 		<forum>https://gaiakodi.com/?support</forum>
 
 		<assets>
-			<icon>resources/icon.png</icon>
-			<clearlogo>resources/clearlogo.png</clearlogo>
-			<fanart>resources/fanart.jpg</fanart>
-			<banner>resources/banner.jpg</banner>
+			<icon>meta/icon.png</icon>
+			<clearlogo>meta/clearlogo.png</clearlogo>
+			<fanart>meta/fanart.jpg</fanart>
+			<banner>meta/banner.jpg</banner>
 		</assets>
 	</extension>
 </addon>
