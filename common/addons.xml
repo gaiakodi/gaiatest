@@ -616,6 +616,35 @@
 	</extension>
 </addon>
 
+<!-- VPNMANAGER -->
+<!-- Dependency: Gaia (optional) -->
+<addon id="service.vpn.manager" name="VPN Manager for OpenVPN" version="7.0.0" provider-name="Zomboided">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+	</requires>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.python.module" library="libs" />
+	<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<news></news>
+		<platform>all</platform>
+		<summary lang="en">Configure and manage VPN connections using openVPN</summary>
+		<description lang="en">Establish a connection to a VPN service and automatically switch VPN locations based on the add-on being used.</description>
+		<license>GPL-2.0-or-later</license>
+		<forum>https://forum.libreelec.tv/thread/5032-vpn-manager-for-openvpn/</forum>
+		<source>https://github.com/Zomboided/service.vpn.manager</source>
+		<assets>
+				<icon>meta/icon.png</icon>
+				<fanart></fanart>
+				<banner></banner>
+				<clearlogo></clearlogo>
+				<screenshot></screenshot>
+		</assets>
+	</extension>
+</addon>
+
 <!-- TRAKT -->
 <!-- Dependency: Gaia (optional) -->
 <addon id="script.trakt" name="Trakt" version="3.5.0" provider-name="Trakt.tv, Razzeee">
@@ -837,6 +866,43 @@
 	</extension>
 </addon>
 
+<!-- EXTENDEDINFO -->
+<!-- Dependency: Gaia (optional) -->
+<addon id="script.extendedinfo" name="ExtendedInfo Script" version="5.6.0+matrix.4" provider-name="phil65 (Philipp Temminghoff)">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="resource.images.studios.white" version="0.0.25"/>
+		<import addon="script.module.kodi65" version="1.2.1+matrix.3"/>
+		<import addon="script.module.routing" version="0.2.3+matrix.1"/>
+	</requires>
+	<extension point="xbmc.python.script" library="default.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.python.pluginsource" library="plugin.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<language/>
+		<summary lang="en">ExtendedInfo Script</summary>
+		<description lang="en">This script offers various possibilities to display online content inside skins as well as a complete MovieDB browser including info dialogs for various media types. Used services are themoviedb.org, theaudiodb.org, Trakt.TV, omdbapi.com and a lot more. Needs skin implementation for lot of functions.</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=160558</forum>
+		<source>https://github.com/phil65/script.extendedinfo</source>
+		<email>phil65@kodi.tv</email>
+		<news>Python 3 fixes by scott967.  Requires Kodi65 module version 1.2.1+matrix.3 which is also available</news>
+		<assets>
+			<icon>meta/icon.png</icon>
+			<fanart>meta/fanart.jpg</fanart>
+			<screenshot>meta/screenshot-01.jpg</screenshot>
+			<screenshot>meta/screenshot-02.jpg</screenshot>
+			<screenshot>meta/screenshot-03.jpg</screenshot>
+			<screenshot>meta/screenshot-04.jpg</screenshot>
+			<screenshot>meta/screenshot-05.jpg</screenshot>
+		</assets>
+	</extension>
+</addon>
+
 <!-- UPNEXT -->
 <!-- Dependency: Gaia (optional) -->
 <addon id="service.upnext" name="Up Next" version="1.1.5+matrix.1" provider-name="im85288">
@@ -931,7 +997,7 @@ v1.1.0 (2020-01-17)
 </addon>
 
 <!-- ADDONSIGNALS -->
-<!-- Dependency: Gaia (optional - used to signal UpNext) -->
+<!-- Dependency: Gaia (optional - used to signal UpNext), YouTubeDl -->
 <addon id="script.module.addon.signals" name="Addon Signals" version="0.0.6+matrix.1" provider-name="Rick Phillips (ruuk)">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
@@ -1014,6 +1080,27 @@ v1.1.0 (2020-01-17)
 	</extension>
 </addon>
 
+<!-- CREWSCRAPERS -->
+<!-- Dependency: Gaia (optional) -->
+<addon id="script.module.thecrew" name="[COLOR orchid]THE CREW MODULE[/COLOR]" version="1.1.5b" provider-name="The Crew">
+	<requires>
+		<!--<import addon="xbmc.python" version="2.25.0" />-->
+		<import addon="script.module.beautifulsoup4"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">The Crew is a team of individuals that does what it can to provide others, you the best in entertainment.</summary>
+		<description lang="en">Many come, Many go. The true and dedicated are here.</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+		<assets>
+			<icon>meta/icon.png</icon>
+			<fanart>meta/fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+
 <!-- TRAKTMODULE -->
 <!-- Dependency: Trakt -->
 <addon id="script.module.trakt" name="trakt.py" version="4.4.0+matrix.1" provider-name="Dean Gardiner, Razzeee">
@@ -1058,7 +1145,7 @@ v1.1.0 (2020-01-17)
 </addon>
 
 <!-- KODI-SIX -->
-<!-- Dependency: Elementum, ResolveUrl, UrlResolver, OathScrapers -->
+<!-- Dependency: Elementum, ResolveUrl, UrlResolver, OathScrapers, YouTubeDl -->
 <addon id="script.module.kodi-six" name="Kodi Six" version="0.1.3.1" provider-name="Roman V.M.">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
@@ -1100,7 +1187,7 @@ v1.1.0 (2020-01-17)
 </addon>
 
 <!-- REQUESTS -->
-<!-- Dependency: Elementum, YouTube, TraktModule, Twitch, EmbuaryInfo, DiamondInfo, FenomScrapers, OathScrapers, MyAccounts, MetadataUtils, TheTVDb -->
+<!-- Dependency: Elementum, YouTube, TraktModule, Twitch, EmbuaryInfo, DiamondInfo, FenomScrapers, OathScrapers, MyAccounts, MetadataUtils, TheTVDb, Kodi65, AutoCompletion -->
 <addon id="script.module.requests" name="requests" version="2.25.1+matrix.1" provider-name="Python Software Foundation">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
@@ -1586,7 +1673,7 @@ You can clone the project and host it in your own server.
 </addon>
 
 <!-- ROUTING -->
-<!-- Dependency: EmbuaryInfo -->
+<!-- Dependency: EmbuaryInfo, ExtendedInfo -->
 <addon id="script.module.routing" name="Plugin routing" version="0.2.3+matrix.1" provider-name="takoi,Team Kodi">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
@@ -1639,7 +1726,7 @@ You can clone the project and host it in your own server.
 </addon>
 
 <!-- BEAUTIFULSOUP4 -->
-<!-- Dependency: OathScrapers, MetadataUtils, DiamondInfo -->
+<!-- Dependency: OathScrapers, CrewScrapers, MetadataUtils, DiamondInfo -->
 <addon id="script.module.beautifulsoup4" name="BeautifulSoup4" version="4.9.3+matrix.1" provider-name="Leonard Richardson (leonardr@segfault.org)">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
@@ -1918,7 +2005,7 @@ v1.0.25 (marcelveldt)
 </addon>
 
 <!-- STUDIOWHITE -->
-<!-- Dependency: DiamondInfo -->
+<!-- Dependency: DiamondInfo, ExtendedInfo -->
 <addon id="resource.images.studios.white" name="Studio Icons - White" version="0.0.28" provider-name="Team Kodi">
 	<extension point="kodi.resource.images" compile="true" type="studios" />
 	<requires>
@@ -1929,6 +2016,92 @@ v1.0.25 (marcelveldt)
 		<description lang="en">White Studio Icons</description>
 		<platform>all</platform>
 		<license>Creative Commons Attribution-Share Alike 3.0 United States</license>
+		<assets>
+			<icon>meta/icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
+<!-- KODI65 -->
+<!-- Dependency: ExtendedInfo -->
+<addon id="script.module.kodi65" name="Utilities for Kodi" version="1.3.0" provider-name="Philipp Temminghoff (phil65), Frank Feuerbacher (fbacher)">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.youtube.dl" version="21.303.0+matrix.1"/>
+		<import addon="script.module.pil" version="5.1.0"/> <!-- Kodi native addon -->
+		<import addon="script.module.autocompletion" version="2.0.3"/>
+		<import addon="script.module.requests" version="2.25.1+matrix.1"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Helper module for Kodi add-ons</summary>
+		<description lang="en_GB">Helper module for commonly needed tasks</description>
+		<platform>all</platform>
+		<license>LGPL-2.1-only</license>
+		<source>https://github.com/fbacher/script.module.kodi65</source>
+		<forum>https://forum.kodi.tv/showthread.php?tid=364435</forum>
+		<news>
+			08/18/2021 Forked from phil65 master prior to python3/future
+			changes. Renamed addon, updated dependencies, adjust to
+			latest kodi API changes. Updated version to 1.3.0 due to the
+			significant changes (particularly name changes).
+
+			Changed youtube.py to require YouTube api_key to be passed as
+			argument. Hard-coded key no longer used.
+
+			Resolved Kodi crash issue caused by a known limitation of numpy,
+			which was indirectly loaded by another library, PIL.
+			Forced numpy to NEVER be loaded. The use of numpy provided a
+			small performance improvement.
+		</news>
+		<assets>
+			<icon>meta/icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
+<!-- AUTOCOMPLETION -->
+<!-- Dependency: Kodi65 -->
+<addon id="script.module.autocompletion" name="AutoCompletion library" version="2.0.3" provider-name="Philipp Temminghoff (phil65),sualfred">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.module.requests" version="2.9.1"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Module providing some AutoCompletion functions</summary>
+		<description lang="en_GB">Module providing some AutoCompletion functions</description>
+		<platform>all</platform>
+		<license>GPL-2.0-or-later</license>
+		<source>https://github.com/sualfred/script.module.autocompletion</source>
+		<assets>
+			<icon>meta/icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+
+<!-- YOUTUBEDL -->
+<!-- Dependency: Kodi65 -->
+<addon id="script.module.youtube.dl" name="youtube-dl Control" version="21.303.0" provider-name="ytdl-org,ruuk,sy6sy2,wwark">
+	<requires>
+		<import addon="script.module.addon.signals" version="0.0.5"/>
+		<import addon="script.module.kodi-six" version="0.1.3"/>
+	</requires>
+	<extension point="xbmc.python.script" library="control.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en_GB">Module providing access to youtube-dl video stream extraction</summary>
+		<description lang="en_GB">Module providing access to youtube-dl video stream extraction for hundreds of sites. Version is based on youtube-dl date version: YY.MDD.V where V is the addon specific sub-version. Also provides downloading with the option for background downloading with a queue and queue manager.</description>
+		<summary lang="el_EL">Βοηθητική μονάδα πρόσβασης στους επιλυτές youtube-dl για την εξαγωγή ροών βίντεο</summary>
+		<description lang="el_EL">Βοηθητική μονάδα πρόσβασης στους επιλυτές youtube-dl για την εξαγωγή ροών βίντεο από εκατοντάδες ιστότοπους. Η έκδοση βασίζεται στην έκδοση ημερομηνίας του youtube-dl: EE.MHH.EK όπου ΕΚ η υπό-έκδοση συγκεκριμένα για το πρόσθετο. Επιπλέον δίνει δυνατότητα μεταφόρτωσης στο παρασκήνιο με ουρά και διαχειριστή αυτής.</description>
+		<summary lang="es_ES">Módulo que proporciona acceso a YouTube-dl para la extracción de flujos de video</summary>
+		<description lang="es_ES">Módulo que proporciona acceso a YouTube-dl para la extracción de flujos de video de cientos de sitios. La versión está basada en la versión de fecha youtube-dl: YY.MDD.V donde V es la subversión específica del complemento. También permite descargas con la opción de descarga en segundo plano con una cola y un administrador de colas.</description>
+		<license>LGPL-2.1-only</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=200877</forum>
+		<source>https://github.com/Catch-up-TV-and-More/script.module.youtube.dl</source>
 		<assets>
 			<icon>meta/icon.png</icon>
 		</assets>

@@ -1,5 +1,5 @@
 
-[B]6.0.0~beta1 (2021.10.03)[/B]
+[B]6.0.0~beta2 (2022.02.28)[/B]
 - Added support for Kodi 19.
 - Changed to new settings format.
 - New metadata detection system.
@@ -77,9 +77,13 @@
 - Added support for BitTorrent v2.
 - Added FenomScrapers.
 - Added OathScrapers.
+- Added CrewScrapers.
 - Added EmbuaryInfo.
 - Added DiamondInfo.
 - Updated to new TVDb API v4.
+- Fixed Premiumize automatic selection.
+- Fixed debrid manual file selection.
+- Improved thread management.
 - Many more bug fixes and new features.
 
 [B]5.6.0 (2019.11.17)[/B]
@@ -915,7 +919,7 @@
 - Fixed theme for splash dialogs.
 
 [B]1.0.0 (2018.01.12)[/B]
-- Added very slow RealDebrid cache inspection. Use with caution: https://gaiakodi.com/support/?a=15
+- Added very slow RealDebrid cache inspection.
 - Updated Premiumize to work with the new API.
 - Added new debrid service OffCloud.
 - Added universal torrent providers: Zooqle, ExtraTorrent, PopcornTime, and Demonoid.

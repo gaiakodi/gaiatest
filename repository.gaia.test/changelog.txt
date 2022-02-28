@@ -1,5 +1,5 @@
 
-[B]6.0.0~beta1 (2021.10.03)[/B]
+[B]6.0.0~beta2 (2022.02.28)[/B]
 - Major version upgrade.
 
 [B]5.0.0[/B]

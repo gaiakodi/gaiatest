@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.gaia" version="6.0.0~beta1" name="Gaia Repository" provider-name="Gaia">
+<addon id="repository.gaia" version="6.0.0~beta2" name="Gaia Repository" provider-name="Gaia">
 	<extension point="xbmc.addon.repository" name="Gaia Repository">
 		<dir>
-			<info compressed="false">https://github.com/gaiakodi/gaiamain/raw/master/common/addons.xml?v=6.0.0~beta1</info>
-			<checksum>https://github.com/gaiakodi/gaiamain/raw/master/common/addons.xml.md5?v=6.0.0~beta1</checksum>
+			<info compressed="false">https://github.com/gaiakodi/gaiamain/raw/master/common/addons.xml?v=6.0.0~beta2</info>
+			<checksum>https://github.com/gaiakodi/gaiamain/raw/master/common/addons.xml.md5?v=6.0.0~beta2</checksum>
 			<datadir zip="true">https://github.com/gaiakodi/gaiamain/raw/master/common/</datadir>
 		</dir>
-		<info compressed="false">https://github.com/gaiakodi/gaiamain/raw/master/addons.xml?v=6.0.0~beta1</info>
-		<checksum>https://github.com/gaiakodi/gaiamain/raw/master/addons.xml.md5?v=6.0.0~beta1</checksum>
+		<info compressed="false">https://github.com/gaiakodi/gaiamain/raw/master/addons.xml?v=6.0.0~beta2</info>
+		<checksum>https://github.com/gaiakodi/gaiamain/raw/master/addons.xml.md5?v=6.0.0~beta2</checksum>
 		<datadir zip="true">https://github.com/gaiakodi/gaiamain/raw/master/</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">

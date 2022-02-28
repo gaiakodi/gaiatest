@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.gaia" version="6.0.0~beta1" name="Gaia" provider-name="Gaia">
+<addon id="plugin.video.gaia" version="6.0.0~beta2" name="Gaia" provider-name="Gaia">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 
-		<import addon="script.gaia.resources" version="6.0.0~beta1" />
-		<import addon="script.gaia.artwork" version="6.0.0~beta1" />
-		<import addon="script.gaia.binaries" version="6.0.0~beta1" optional="true" />
-		<import addon="script.gaia.icons" version="6.0.0~beta1" optional="true" />
-		<import addon="script.gaia.skins" version="6.0.0~beta1" optional="true" />
-		<import addon="repository.gaia" version="6.0.0~beta1" optional="true" />
+		<import addon="script.gaia.resources" version="6.0.0~beta2" />
+		<import addon="script.gaia.binaries" version="6.0.0~beta2" optional="true" />
+		<import addon="script.gaia.icons" version="6.0.0~beta2" optional="true" />
+		<import addon="script.gaia.skins" version="6.0.0~beta2" optional="true" />
+		<import addon="repository.gaia" version="6.0.0~beta2" optional="true" />
 
 		<import addon="script.module.orion" version="3.0.0" />
 
@@ -18,7 +17,7 @@
 		<import addon="plugin.video.elementum" version="0.0.43" optional="true" />
 		<import addon="plugin.video.quasar" version="0.9.78" optional="true" />
 
-		<import addon="script.extendedinfo" version="5.6.1" optional="true" /> <!-- Not Python 3 compatible -->
+		<import addon="script.extendedinfo" version="5.6.0" optional="true" />
 		<import addon="script.diamondinfo" version="3.19" optional="true" />
 		<import addon="script.embuary.info" version="2.0.8" optional="true" />
 
@@ -28,15 +27,23 @@
 		<import addon="script.module.metahandler" version="2.9.0" optional="true" />
 		<import addon="service.upnext" version="1.0.0" optional="true" />
 		<import addon="script.module.addon.signals" version="0.0.1" optional="true" />
+		<import addon="service.vpn.manager" version="6.0.0" optional="true" />
 
+		<!--
+		NB: Do NOT import any of the unstructured external providers.
+		Otherwise Kodi/Python will use the native/installed addon code, instead of the edited Gaia code.
+		The actual import of these addons happen in providers/core/external.py -> instancesInclude().
 		<import addon="script.module.fenomscrapers" version="1.4.1" optional="true" />
 		<import addon="script.module.oathscrapers" version="1.00.07" optional="true" />
-		<import addon="script.module.openscrapers" version="0.0.2.012" optional="true" /> <!-- Not Python 3 compatible -->
-		<import addon="script.module.lambdascrapers" version="2.0.0" optional="true" /> <!-- Not Python 3 compatible -->
-		<import addon="script.module.civitasscrapers" version="0.0.5.8" optional="true" /> <!-- Not Python 3 compatible -->
-		<import addon="script.module.globalscrapers" version="4.1.1" optional="true" /> <!-- Not Python 3 compatible -->
+		<import addon="script.module.thecrew" version="1.1.5b" optional="true" />
+		<import addon="script.module.openscrapers" version="0.0.2.012" optional="true" /> < !-- Not Python 3 compatible -- >
+		<import addon="script.module.lambdascrapers" version="2.0.0" optional="true" /> < !-- Not Python 3 compatible -- >
+		<import addon="script.module.civitasscrapers" version="0.0.5.8" optional="true" /> < !-- Not Python 3 compatible -- >
+		<import addon="script.module.globalscrapers" version="4.1.1" optional="true" /> < !-- Not Python 3 compatible -- >
+		-->
 		<import addon="script.module.universalscrapers" version="1.0.0" optional="true" /> <!-- Not Python 3 compatible -->
 		<import addon="script.module.nanscrapers" version="0.5.45" optional="true" /> <!-- Not Python 3 compatible -->
+
 	</requires>
 
 	<extension point="xbmc.python.pluginsource" library="addon.py">
@@ -46,14 +53,14 @@
 	<extension point="kodi.context.item">
 		<menu id="kodi.core.main">
 			<item library="context.py">
-				<label>$INFO[Window(Home).Property(GaiaContextLabelMenu)]</label>
+				<label>$INFO[Window(Home).Property(GaiaContextLabel)]</label>
 				<visible>
-					[!String.StartsWith(Container.PluginName,plugin.video.gaia) + Integer.IsEqual(Window(Home).Property(GaiaContextSettingsEnabled),1)] +
+					[!String.StartsWith(Container.PluginName,plugin.video.gaia) + Integer.IsEqual(Window(Home).Property(GaiaContextEnabled),1)] +
 					[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)] +
 					[
-						[!String.StartsWith(Container.FolderPath,playlistvideo://) + !String.IsEmpty(Container.PluginName) + Integer.IsEqual(Window(Home).Property(GaiaContextSettingsEnabledAddon),1)] |
-						[!String.StartsWith(Container.FolderPath,playlistvideo://) + String.IsEmpty(Container.PluginName) + Integer.IsEqual(Window(Home).Property(GaiaContextSettingsEnabledWidget),1)] |
-						[String.StartsWith(Container.FolderPath,playlistvideo://) + Integer.IsEqual(Window(Home).Property(GaiaContextSettingsEnabledPlaylist),1)]
+						[!String.StartsWith(Container.FolderPath,playlistvideo://) + !String.IsEmpty(Container.PluginName) + Integer.IsEqual(Window(Home).Property(GaiaContextAddon),1)] |
+						[!String.StartsWith(Container.FolderPath,playlistvideo://) + String.IsEmpty(Container.PluginName) + Integer.IsEqual(Window(Home).Property(GaiaContextWidget),1)] |
+						[String.StartsWith(Container.FolderPath,playlistvideo://) + Integer.IsEqual(Window(Home).Property(GaiaContextPlaylist),1)]
 					]
 				</visible>
 			</item>
