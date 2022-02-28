@@ -1209,6 +1209,27 @@ v1.1.0 (2020-01-17)
 		</assets>
 	</extension>
 </addon>
+<addon id="script.module.requests" name="requests" version="2.25.1" provider-name="Python Software Foundation">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.certifi" version="2020.12.05"/>
+		<import addon="script.module.chardet" version="4.0.0"/>
+		<import addon="script.module.idna" version="2.10.0"/>
+		<import addon="script.module.urllib3" version="1.26.4"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Requests is an elegant and simple HTTP library for Python, built for human beings.</summary>
+		<description lang="en_GB">Requests is an elegant and simple HTTP library for Python, built for human beings.</description>
+		<license>Apache-2.0</license>
+		<platform>all</platform>
+		<website>https://requests.readthedocs.io/</website>
+		<source>https://github.com/psf/requests</source>
+		<assets>
+			<icon>meta/icon.png</icon>
+		</assets>
+	</extension>
+</addon>
 
 <!-- CERTIFI -->
 <!-- Dependency: Requests -->
@@ -1252,6 +1273,23 @@ v1.1.0 (2020-01-17)
 <!-- IDNA -->
 <!-- Dependency: Requests -->
 <addon id="script.module.idna" name="idna" version="2.10.0+matrix.1" provider-name="Kim Davies">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Internationalized Domain Names for Python</summary>
+		<description lang="en_GB">Internationalized Domain Names for Python</description>
+		<license>BSD-3-Clause</license>
+		<platform>all</platform>
+		<website>https://github.com/kjd/idna</website>
+		<source>https://github.com/kjd/idna</source>
+		<assets>
+			<icon>meta/icon.png</icon>
+		</assets>
+	</extension>
+</addon>
+<addon id="script.module.idna" name="idna" version="2.10.0" provider-name="Kim Davies">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 	</requires>
