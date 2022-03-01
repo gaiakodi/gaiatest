@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.gaia.test" version="6.0.0~beta2" name="Gaia Test Repository" provider-name="Gaia">
+<addon id="repository.gaia.test" version="6.0.0~beta3" name="Gaia Test Repository" provider-name="Gaia">
 	<extension point="xbmc.addon.repository" name="Gaia Test Repository">
 		<dir>
-			<info compressed="false">https://github.com/gaiakodi/gaiatest/raw/master/common/addons.xml?v=6.0.0~beta2</info>
-			<checksum>https://github.com/gaiakodi/gaiatest/raw/master/common/addons.xml.md5?v=6.0.0~beta2</checksum>
+			<info compressed="false">https://github.com/gaiakodi/gaiatest/raw/master/common/addons.xml?v=6.0.0~beta3</info>
+			<checksum>https://github.com/gaiakodi/gaiatest/raw/master/common/addons.xml.md5?v=6.0.0~beta3</checksum>
 			<datadir zip="true">https://github.com/gaiakodi/gaiatest/raw/master/common/</datadir>
 		</dir>
-		<info compressed="false">https://github.com/gaiakodi/gaiatest/raw/master/addons.xml?v=6.0.0~beta2</info>
-		<checksum>https://github.com/gaiakodi/gaiatest/raw/master/addons.xml.md5?v=6.0.0~beta2</checksum>
+		<info compressed="false">https://github.com/gaiakodi/gaiatest/raw/master/addons.xml?v=6.0.0~beta3</info>
+		<checksum>https://github.com/gaiakodi/gaiatest/raw/master/addons.xml.md5?v=6.0.0~beta3</checksum>
 		<datadir zip="true">https://github.com/gaiakodi/gaiatest/raw/master/</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
