@@ -1,5 +1,5 @@
 
-[B]6.0.0~beta3 (2022.03.01)[/B]
+[B]6.0.0~beta4 (2022.03.04)[/B]
 - Added support for Kodi 19.
 - Changed to new settings format.
 - New metadata detection system.

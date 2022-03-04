@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.gaia" version="6.0.0~beta3" name="Gaia" provider-name="Gaia">
+<addon id="plugin.video.gaia" version="6.0.0~beta4" name="Gaia" provider-name="Gaia">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 
@@ -10,6 +10,21 @@
 		<import addon="repository.gaia" version="6.0.0~beta3" optional="true" />
 
 		<import addon="script.module.orion" version="3.0.0" />
+
+		<!--
+		NB: Kodi crashes on some devices (eg: Android) if the addon info dialog is opened on Gaia from the Gaia repository.
+		One other systems (eg: Windows and Linux) this does not happen.
+		It seems that the crash is caused by importing certain addons (eg: script.trakt and service.vpn.manager), but the reason is not known.
+		For now only add dependecies that are actually imported through Python.
+		Any addons that are used through xbmc.addon(...) or in any other way that does not directly include the addon's code, is not imported.
+		Updated: It seems this has been fixed in Kodi 19.4. If this problem reoccurs in the future, comment out every addon below, except:
+			script.module.resolveurl
+			script.module.urlresolver
+			script.module.metahandler
+			script.module.addon.signals
+			script.module.universalscrapers
+			script.module.nanscrapers
+		-->
 
 		<import addon="script.module.resolveurl" version="5.0.06" optional="true" />
 		<import addon="script.module.urlresolver" version="3.0.29" optional="true" />
