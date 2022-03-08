@@ -1,5 +1,5 @@
 
-[B]6.0.0~beta3 (2022.03.01)[/B]
+[B]6.0.0~beta6 (2022.03.08)[/B]
 - Major version upgrade.
 - Removed Python dependency.
 - Added new icons.

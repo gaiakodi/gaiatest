@@ -718,6 +718,30 @@
 	</extension>
 </addon>
 
+<addon id="script.gaia.skins" version="6.0.0~beta6" name="Gaia Skins" provider-name="Gaia">
+	<requires>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Gaia Skins</summary>
+		<description>The theme skins for Gaia</description>
+		<disclaimer lang="en">Gaia and its developers are not in any way affiliated with Kodi, Premiumize, OffCloud, RealDebrid, EasyNews, Orion, or any of the sites and providers used in the addon.<br/>Gaia is and always will be free and open-source. None of its code and resources may be sold or redistributed for any commercial purposes.<br/>Gaia and its developers do not host, create, or distribute any of the content displayed in the addon, it simply searches public sources.</disclaimer>
+
+		<platform>all</platform>
+		<license>GPL 3.0</license>
+
+		<website>https://gaiakodi.com</website>
+		<forum>https://gaiakodi.com/?support</forum>
+
+		<assets>
+			<icon>meta/icon.png</icon>
+			<clearlogo>meta/clearlogo.png</clearlogo>
+			<fanart>meta/fanart.jpg</fanart>
+			<banner>meta/banner.jpg</banner>
+		</assets>
+	</extension>
+</addon>
+
 <addon id="script.gaia.skins" version="6.0.0~beta3" name="Gaia Skins" provider-name="Gaia">
 	<requires>
 	</requires>
@@ -1031,6 +1055,30 @@
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Gaia Development Repository</summary>
 		<description lang="en">The Gaia repository for testing and development.</description>
+		<disclaimer lang="en">Gaia and its developers are not in any way affiliated with Kodi, Premiumize, OffCloud, RealDebrid, EasyNews, Orion, or any of the sites and providers used in the addon.<br/>Gaia is and always will be free and open-source. None of its code and resources may be sold or redistributed for any commercial purposes.<br/>Gaia and its developers do not host, create, or distribute any of the content displayed in the addon, it simply searches public sources.</disclaimer>
+
+		<platform>all</platform>
+		<license>GPL 3.0</license>
+
+		<website>https://gaiakodi.com</website>
+		<forum>https://gaiakodi.com/?support</forum>
+
+		<assets>
+			<icon>meta/icon.png</icon>
+			<clearlogo>meta/clearlogo.png</clearlogo>
+			<fanart>meta/fanart.jpg</fanart>
+			<banner>meta/banner.jpg</banner>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="script.gaia.resources" version="6.0.0~beta6" name="Gaia Resources" provider-name="Gaia">
+	<requires>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Gaia Resources</summary>
+		<description>The general resources for Gaia</description>
 		<disclaimer lang="en">Gaia and its developers are not in any way affiliated with Kodi, Premiumize, OffCloud, RealDebrid, EasyNews, Orion, or any of the sites and providers used in the addon.<br/>Gaia is and always will be free and open-source. None of its code and resources may be sold or redistributed for any commercial purposes.<br/>Gaia and its developers do not host, create, or distribute any of the content displayed in the addon, it simply searches public sources.</disclaimer>
 
 		<platform>all</platform>
