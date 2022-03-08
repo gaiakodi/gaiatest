@@ -5,10 +5,10 @@
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 
-		<import addon="script.gaia.resources" version="6.0.0~beta1" />
+		<import addon="script.gaia.resources" version="6.0.0~beta6" />
 		<import addon="script.gaia.binaries" version="6.0.0~beta1" optional="true" />
 		<import addon="script.gaia.icons" version="6.0.0~beta1" optional="true" />
-		<import addon="script.gaia.skins" version="6.0.0~beta1" optional="true" />
+		<import addon="script.gaia.skins" version="6.0.0~beta6" optional="true" />
 		<import addon="repository.gaia" version="6.0.0~beta1" optional="true" />
 
 		<import addon="script.module.orion" version="3.0.0" />
