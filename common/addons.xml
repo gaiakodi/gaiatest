@@ -3,7 +3,7 @@
 
 <!-- ORION -->
 <!-- Dependency: Gaia (required) -->
-<addon id="script.module.orion" version="4.6.5" name="Orion" provider-name="Orion">
+<addon id="script.module.orion" version="4.7.4" name="Orion" provider-name="Orion">
 	<requires>
 		<import addon="xbmc.addon" version="17.0.000" />
 		<import addon="repository.orion" version="1.0.0" optional="true" />
@@ -50,11 +50,12 @@
 
 <!-- ELEMENTUM -->
 <!-- Dependency: Gaia (optional) -->
-<addon id="plugin.video.elementum" name="Elementum" version="0.1.83+android" provider-name="elgatito">
+<addon id="plugin.video.elementum" name="Elementum" version="0.1.86+android" provider-name="elgatito">
 	<requires>
 		<import addon="xbmc.addon" version="16.0.0" />
 		<import addon="repository.elementum" optional="true" />
 		<import addon="script.module.kodi-six" />
+		<import addon="script.module.requests" />
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="navigation.py">
 		<provides>video</provides>
@@ -93,11 +94,12 @@
 		</assets>
 	</extension>
 </addon>
-<addon id="plugin.video.elementum" name="Elementum" version="0.1.83+linux" provider-name="elgatito">
+<addon id="plugin.video.elementum" name="Elementum" version="0.1.86+linux" provider-name="elgatito">
 	<requires>
 		<import addon="xbmc.addon" version="16.0.0" />
 		<import addon="repository.elementum" optional="true" />
 		<import addon="script.module.kodi-six" />
+		<import addon="script.module.requests" />
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="navigation.py">
 		<provides>video</provides>
@@ -136,11 +138,12 @@
 		</assets>
 	</extension>
 </addon>
-<addon id="plugin.video.elementum" name="Elementum" version="0.1.83+mac" provider-name="elgatito">
+<addon id="plugin.video.elementum" name="Elementum" version="0.1.86+mac" provider-name="elgatito">
 	<requires>
 		<import addon="xbmc.addon" version="16.0.0" />
 		<import addon="repository.elementum" optional="true" />
 		<import addon="script.module.kodi-six" />
+		<import addon="script.module.requests" />
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="navigation.py">
 		<provides>video</provides>
@@ -165,7 +168,7 @@
 		<disclaimer lang="es">El autor no posee ni aloja ningún contenido que se encuentre a través de este complemento. El autor no está unido ni relacionado de ninguna manera con Kodi, Team Kodi, o XBMC Foundation.</disclaimer>
 		<disclaimer lang="sv">Skaparen äger inte eller är värd av något innehåll som finns i detta tillägg. Författaren är inte ansluten till eller på något annat sätt en del av Kodi, Team Kodi eller XBMC Foundation.</disclaimer>
 		<language>en el es de fi fr he hr it nl pt ro sk sv</language>
-		<platform>osx osx64 osx32 osx-x86_64 osx-i686 ios ios-armv7 ios-aarch64</platform>
+		<platform>osx osx64 osx32 osx-x86_64 osx-i686 ios ios-armv7 ios-aarch64 tvos tvos-aarch64</platform>
 		<website>http://elementum.surge.sh/</website>
 		<source>https://github.com/elgatito/plugin.video.elementum</source>
 		<forum></forum>
@@ -179,11 +182,12 @@
 		</assets>
 	</extension>
 </addon>
-<addon id="plugin.video.elementum" name="Elementum" version="0.1.83+windows" provider-name="elgatito">
+<addon id="plugin.video.elementum" name="Elementum" version="0.1.86+windows" provider-name="elgatito">
 	<requires>
 		<import addon="xbmc.addon" version="16.0.0" />
 		<import addon="repository.elementum" optional="true" />
 		<import addon="script.module.kodi-six" />
+		<import addon="script.module.requests" />
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="navigation.py">
 		<provides>video</provides>
@@ -222,6 +226,8 @@
 		</assets>
 	</extension>
 </addon>
+<!--
+Do not include the repository. Even if the repo is not installed, Kodi will pull in repo's URL and complain about unsecure HTTP.
 <addon id="repository.elementum" name="Elementum Repository" version="0.0.43" provider-name="elgatito">
 	<requires></requires>
 	<extension point="xbmc.addon.repository" name="Elementum Repository">
@@ -238,7 +244,8 @@
 		</assets>
 	</extension>
 </addon>
-<addon id="script.elementum.burst" name="Elementum [COLOR FFFF6B00]Burst[/COLOR]" version="0.0.70" provider-name="elgatito">
+-->
+<addon id="script.elementum.burst" name="Elementum [COLOR FFFF6B00]Burst[/COLOR]" version="0.0.71" provider-name="elgatito">
 	<requires>
 		<import addon="xbmc.addon" version="16.0.0" />
 		<import addon="plugin.video.elementum" optional="true"/>
@@ -270,8 +277,8 @@
 		<source>https://github.com/elgatito/script.elementum.burst</source>
 		<forum>TODO</forum>
 		<assets>
-			<icon>meta/icon.png</icon>
-			<fanart>meta/fanart.jpg</fanart>
+		<icon>meta/icon.png</icon>
+		<fanart>meta/fanart.jpg</fanart>
 		</assets>
 	</extension>
 </addon>
@@ -331,6 +338,31 @@
 		<assets>
 			<icon>meta/icon.png</icon>
 			<fanart>meta/fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+<addon id="service.lt2http" name="lt2http" version="0.0.16" provider-name="ElementumOrg">
+	<requires>
+		<import addon="xbmc.addon" version="16.0.0" />
+		<import addon="repository.elementum" optional="true" />
+		<import addon="script.module.kodi-six" />
+		<import addon="script.module.requests" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="navigation.py" />
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.python.module" library="resources/site-packages" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">LT2http: LibTorrent-to-HTTP streaming addon</summary>
+		<description lang="en">LT2http is a torrent download and streaming engine.</description>
+		<disclaimer lang="en">The author does not own or host any content found within this Addon. The author is not connected to or in any other way affiliated with Kodi, Team Kodi, or the XBMC Foundation.</disclaimer>
+		<language>en el es de fi fr he hr it nl pt ro sk</language>
+		<platform>all</platform>
+		<website>http://elementum.surge.sh/</website>
+		<source>https://github.com/ElementumOrg/lt2http</source>
+		<forum></forum>
+		<license>Non commercial. See https://github.com/ElementumOrg/service/blob/master/LICENSE</license>
+		<assets>
+			<fanart>meta/fanart.png</fanart>
 		</assets>
 	</extension>
 </addon>
@@ -461,6 +493,8 @@
 		</assets>
 	</extension>
 </addon>
+<!--
+Do not include the repository. Even if the repo is not installed, Kodi will pull in repo's URL and complain about unsecure HTTP.
 <addon id="repository.quasar" name="Quasar Repository" version="0.9.78" provider-name="scakemyer">
 	<requires></requires>
 	<extension point="xbmc.addon.repository" name="Quasar Repository">
@@ -477,6 +511,7 @@
 		</assets>
 	</extension>
 </addon>
+-->
 <addon id="script.quasar.burst" name="Quasar [COLOR FFFF6B00]Burst[/COLOR]" version="0.6.0" provider-name="scakemyer">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
